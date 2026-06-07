@@ -1,12 +1,12 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Services;
 
 class VoertuigValidator
 {
     public static function isPositiveInteger(mixed $value): bool
     {
-        if (!is_numeric($value)) {
+        if (! is_numeric($value)) {
             return false;
         }
 
@@ -24,12 +24,16 @@ class VoertuigValidator
         return str_repeat('*', $aantal);
     }
 
-    public static function formatDatum(string $datum): string
+    public static function formatDatum(mixed $datum): string
     {
-        $timestamp = strtotime($datum);
+        if ($datum instanceof \DateTimeInterface) {
+            return $datum->format('d-m-Y');
+        }
+
+        $timestamp = strtotime((string) $datum);
 
         if ($timestamp === false) {
-            return $datum;
+            return (string) $datum;
         }
 
         return date('d-m-Y', $timestamp);
