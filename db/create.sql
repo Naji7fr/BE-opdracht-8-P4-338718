@@ -122,7 +122,7 @@ INSERT INTO Voertuig (Id, Kenteken, Type, Bouwjaar, Brandstof, TypeVoertuigId, I
 (7,  'UU-HH-JK',  'M.A.N',     '2017-12-03', 'Diesel',     2, 1),
 (8,  'ST-FZ-28',  'Citroën',   '2018-01-20', 'Elektrisch', 1, 1),
 (9,  '123-FR-T',  'Piaggio ZIP','2021-02-01','Benzine',    4, 1),
-(10, 'DRS-52-P',  'Vespa',     '2022-03-21', 'Benzine',    4, 1),
+(10, 'DRS-52-P',  'Vespa Piaggio', '2022-03-21', 'Benzine',    4, 1),
 (11, 'STP-12-U',  'Kymco',     '2022-07-02', 'Benzine',    4, 0),
 (12, '45-SD-23',  'Renault',   '2023-01-01', 'Diesel',     3, 1);
 
